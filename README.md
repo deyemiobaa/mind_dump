@@ -32,4 +32,4 @@ A Procfile is included in the project. To start the server, run `bin/dev` in the
 #### Running tests
 
 RSpec is used for tests. To run all the specs run: `rspec`. This will run the tests and generate a coverage report in the `coverage` directory.
-To run a specific file, run rspec `<file name>`.
+To run a specific file, run `rspec <file name>`.
