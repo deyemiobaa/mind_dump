@@ -1,0 +1,12 @@
+require: rubocop-rails
+
+AllCops:
+    NewCops: enable
+    Exclude:
+    - "db/**/*"
+    - "bin/*" 
+    - "config/**/*"
+    - "Guardfile"
+    - "Rakefile"
+    - "node_modules/**/*"
+    - "app/helpers/**/*"
