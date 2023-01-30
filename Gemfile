@@ -86,3 +86,5 @@ gem 'strong_migrations'
 gem 'devise'
 
 gem 'faker'
+
+gem 'erb_lint', require: false
