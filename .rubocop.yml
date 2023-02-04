@@ -10,3 +10,6 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
     - "app/helpers/**/*"
+
+Style/Documentation:
+  Enabled: false
