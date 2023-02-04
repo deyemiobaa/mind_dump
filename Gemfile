@@ -88,4 +88,4 @@ gem 'devise'
 
 gem 'faker'
 
-gem 'erb_lint', require: false
+gem 'rubocop-rails', require: false
