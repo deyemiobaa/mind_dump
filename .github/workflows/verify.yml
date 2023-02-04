@@ -56,6 +56,11 @@ jobs:
           RAILS_ENV: test
         run: |
           bundle exec rails db:setup
+
+      - name: Compile assets (tailwind)
+        run: |
+          bundle exec rake assets:precompile
+
       - name: Run tests (RSpec)
         run: |
           bundle exec rspec

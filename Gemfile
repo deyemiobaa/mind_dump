@@ -89,3 +89,5 @@ gem 'devise'
 gem 'faker'
 
 gem 'rubocop-rails', require: false
+
+gem 'panolint'
