@@ -17,7 +17,7 @@ module.exports = {
         warning: "rgb(249 193 7)"
       },
       animation: {
-        "fade-out": "fade 5s linear 1 normal forwards"
+        "fade-out": "fade 10s linear 1 normal forwards"
       },
       keyframes: {
         fade: {
