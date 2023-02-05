@@ -1,3 +1,6 @@
+inherit_gem:
+  panolint: panolint-rubocop.yml
+
 require: rubocop-rails
 
 AllCops:
@@ -10,3 +13,6 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
     - "app/helpers/**/*"
+
+Style/Documentation:
+  Enabled: false

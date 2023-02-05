@@ -1,0 +1,51 @@
+name: verify
+on: 
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITHOUT: development
+      PGHOST: localhost
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      RAILS_ENV: test
+    services:
+      postgres:
+        image: postgres:14
+        ports: ["5432:5432"]
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Set up test database
+        env:
+          PGHOST: localhost
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          RAILS_ENV: test
+        run: |
+          bundle exec rails db:setup
+
+      - name: Compile assets (tailwind)
+        run: |
+          bundle exec rake assets:precompile
+
+      - name: Run tests (RSpec)
+        run: |
+          bundle exec rspec

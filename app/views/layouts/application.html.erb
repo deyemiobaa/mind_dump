@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MindDump</title>
+    <title>MindMeet.Social</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,9 +12,8 @@
   </head>
 
   <body>
-    <main class="container px-5 mx-auto mt-28">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <main class="relative">
+      <%= render "shared/flash" %>
       <%= yield %>
     </main>
   </body>
