@@ -3,7 +3,7 @@
   <div
     class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white py-16 px-10 sm:px-12 md:px-[60px]"
   >
-    <div class="mb-10 text-center md:mb-16">
+    <%# <div class="mb-10 text-center md:mb-16">
       <a
         href="javascript:void(0)"
         class="mx-auto inline-block max-w-[160px]"
@@ -13,7 +13,7 @@
           alt="logo"
         />
       </a>
-    </div>
+    </div> %>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {novalidate: true, class: "group"}) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="mb-6">
